@@ -544,3 +544,12 @@ footer {
         width: 100%;
     }
 }
+
+/* Contact Page */
+.contact-handle {
+    margin-top: 12px;
+    font-family: var(--font-mono);
+    font-size: 0.85rem;
+    color: #fff;
+    opacity: 0.8;
+}
