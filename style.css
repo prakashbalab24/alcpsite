@@ -512,6 +512,35 @@ footer {
 
 @media (max-width: 768px) {
     .flow-container-wrapper {
-        justify-content: flex-start;
+        justify-content: center;
+        overflow-x: hidden;
+        /* No scroll needed for vertical */
+    }
+
+    .flow-container {
+        flex-direction: column;
+        min-width: auto;
+        width: 100%;
+        gap: 24px;
+    }
+
+    .flow-node {
+        width: 100%;
+        max-width: 280px;
+        /* prevent too wide on mobile */
+    }
+
+    .flow-arrow-connector {
+        transform: rotate(90deg);
+        margin: -8px 0;
+        /* Pull them closer */
+    }
+
+    /* Adjust subtext to not overlap or look weird in stack */
+    .flow-subtext {
+        position: static;
+        margin-top: 8px;
+        transform: none;
+        width: 100%;
     }
 }
