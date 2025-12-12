@@ -546,10 +546,27 @@ footer {
 }
 
 /* Contact Page */
-.contact-handle {
-    margin-top: 12px;
-    font-family: var(--font-mono);
-    font-size: 0.85rem;
+.contact-links-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 12px;
+    margin-top: 24px;
+    font-size: 1rem;
+    color: var(--text-muted);
+}
+
+.simple-link {
+    color: var(--text-muted);
+    transition: var(--transition-base);
+    text-decoration: underline;
+    text-underline-offset: 4px;
+}
+
+.simple-link:hover {
     color: #fff;
-    opacity: 0.8;
+}
+
+.separator {
+    color: var(--border-color);
 }
