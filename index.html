@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ALCP — App–LLM Context Protocol</title>
+    <meta name="description" content="ALCP is an open standard for sharing structured app context with AI models." />
+
+    <!-- Google Fonts: Outfit (Sans) + JetBrains Mono (Code) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500&family=Outfit:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+
+    <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+
+    <!-- Navigation -->
+    <nav class="nav-wrapper">
+        <div class="container nav-content">
+            <div class="logo">
+                <div class="logo-icon">
+                    <div class="logo-glow"></div>
+                    <span>A</span>
+                </div>
+                ALCP
+            </div>
+
+            <div class="nav-links">
+                <a href="#overview" class="nav-link">Overview</a>
+                <a href="#capabilities" class="nav-link">Capabilities</a>
+                <a href="#benefits" class="nav-link">Why ALCP?</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main class="container page-content">
+
+        <!-- Header Section -->
+        <section id="overview" class="doc-section fade-up">
+            <h1 class="doc-title">What is the App–LLM Context Protocol (ALCP)?</h1>
+            <p class="doc-lead">
+                ALCP is an open-source standard for sharing structured app state with AI models.
+            </p>
+            <p class="doc-text">
+                Using ALCP, applications—like nutrition trackers, budget managers, or workout logs—can export their
+                current context in a standardized format. This enables AI models (like Claude or ChatGPT) to understand
+                the data instantly without relying on OCR, screenshots, or manual copy-pasting.
+            </p>
+            <p class="doc-text">
+                Think of ALCP like <strong>Markdown for App State</strong>. Just as Markdown provides a standardized way
+                to format text that any editor can read, ALCP provides a standardized way to format application data
+                that any LLM can understand.
+            </p>
+
+            <!-- Simplified Diagram / Visual -->
+            <div class="visual-container">
+                <div class="preview-card minimalist">
+                    <div class="card-header">
+                        <span style="font-size: 0.8rem; opacity: 0.7;">alcp_payload.json</span>
+                    </div>
+                    <div class="code-window">
+                        <pre>{
+  <span class="syntax-key">"protocol"</span>: <span class="syntax-string">"ALCP"</span>,
+  <span class="syntax-key">"app"</span>: { <span class="syntax-key">"name"</span>: <span class="syntax-string">"FitnessPro"</span> },
+  <span class="syntax-key">"intent"</span>: { <span class="syntax-key">"goal"</span>: <span class="syntax-string">"analyze_progress"</span> },
+  <span class="syntax-key">"payload"</span>: {
+    <span class="syntax-key">"type"</span>: <span class="syntax-string">"workout_log"</span>,
+    <span class="syntax-key">"data"</span>: { <span class="syntax-key">"squat_max"</span>: <span class="syntax-num">140</span>, <span class="syntax-key">"trend"</span>: <span class="syntax-string">"up"</span> }
+  }
+}</pre>
+                    </div>
+                    <div class="flow-arrow-row">
+                        <span>App State</span>
+                        <span class="arrow">→</span>
+                        <span>ALCP Envelope</span>
+                        <span class="arrow">→</span>
+                        <span>LLM Context</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <hr class="divider fade-up delay-100" />
+
+        <!-- Capabilities Section -->
+        <section id="capabilities" class="doc-section fade-up delay-100">
+            <h2>What can ALCP enable?</h2>
+            <ul class="bullet-list">
+                <li>
+                    <strong>Instant Context:</strong> A nutrition app can share a complex food log with one click,
+                    allowing an AI to suggest immediate dietary adjustments.
+                </li>
+                <li>
+                    <strong>Error-Free Data:</strong> Finance apps can export transaction histories directly,
+                    eliminating "hallucinations" caused by messy copy-pasting.
+                </li>
+                <li>
+                    <strong>Cross-App Workflows:</strong> Copy context from a calendar app and paste it into a travel
+                    agent AI to plan an itinerary that fits your schedule.
+                </li>
+                <li>
+                    <strong>Standardized Interactions:</strong> Developers only need to build one "Share to AI" feature
+                    to support every LLM on the market.
+                </li>
+            </ul>
+        </section>
+
+        <!-- Why It Matters Section -->
+        <section id="benefits" class="doc-section fade-up delay-200">
+            <h2>Why does ALCP matter?</h2>
+            <p class="doc-text">Depending on your role, ALCP simplifies the connection between software and
+                intelligence.</p>
+
+            <div class="grid-3">
+                <div class="benefit-card">
+                    <h3>For Developers</h3>
+                    <p>Reduces the complexity of building AI integrations. Expose your app's data once via ALCP, and it
+                        works with any model.</p>
+                </div>
+                <div class="benefit-card">
+                    <h3>For AI Agents</h3>
+                    <p>Provides clean, typed, and structured data, drastically improving reasoning capabilities and
+                        reliability.</p>
+                </div>
+                <div class="benefit-card">
+                    <h3>For End-Users</h3>
+                    <p>Enables a seamless experience. No more screenshots or explaining data—just click share and get
+                        answers.</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p class="footer-text">
+                by Balaji Manikandan
+            </p>
+        </div>
+    </footer>
+
+</body>
+
+</html>
